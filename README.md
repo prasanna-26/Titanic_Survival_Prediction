@@ -1,29 +1,37 @@
 # Titanic Survival Prediction - Machine Learning Project
 
-This project is aimed at predicting whether a passenger survived or not on the Titanic using machine learning models. The dataset contains various features about the passengers, such as their age, gender, class, and more. We will be using multiple machine learning algorithms to predict survival and evaluate their performance.
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Technologies Used](#technologies-used)
+3. [Project Steps](#project-steps)
+4. [Data Preprocessing](#data-preprocessing)
+5. [Machine Learning Models Used](#machine-learning-models-used)
+6. [Evaluation Metrics](#evaluation-metrics)
+7. [Results](#results)
+8. [Acknowledgements](#acknowledgements)
+9. [Understanding the Models Used in Titanic Survival Prediction](#understanding-the-models-used-in-titanic-survival-prediction)
+    1. [Logistic Regression](#logistic-regression)
+    2. [Random Forest](#random-forest)
+    3. [Support Vector Classifier (SVC)](#support-vector-classifier-svc)
+10. [Model Comparison and Applicability](#model-comparison-and-applicability)
+11. [Result Interpretation and Final Output](#result-interpretation-and-final-output)
+12. [Conclusion](#conclusion)
+
+---
 
 ## Project Overview
 
 The Titanic dataset is a famous dataset used in data science and machine learning competitions. This project uses various algorithms to predict survival on the Titanic. The goal is to compare the performance of different models and understand the importance of data preprocessing.
 
-### Key Features:
-- **Survived**: Whether the passenger survived (1) or not (0).
-- **Pclass**: Passenger class (1, 2, 3).
-- **Name**: Name of the passenger.
-- **Sex**: Gender of the passenger (male/female).
-- **Age**: Age of the passenger.
-- **SibSp**: Number of siblings or spouses aboard.
-- **Parch**: Number of parents or children aboard.
-- **Fare**: Amount of money the passenger paid for the ticket.
-- **Embarked**: Port of embarkation (C = Cherbourg; Q = Queenstown; S = Southampton).
-
 ## Technologies Used
+
 - Python 3
 - Pandas, NumPy
 - Scikit-learn
 - Matplotlib, Seaborn
 
 ## Project Steps
+
 1. **Data Loading**: The Titanic dataset is loaded from a CSV file.
 2. **Data Preprocessing**: Missing values are handled, categorical variables are encoded, and continuous variables are scaled.
 3. **Model Training**: We train multiple models, including Logistic Regression, Random Forest, and Support Vector Classifier (SVC).
@@ -31,21 +39,25 @@ The Titanic dataset is a famous dataset used in data science and machine learnin
 5. **Model Comparison**: The models are compared to determine the best-performing one.
 
 ## Data Preprocessing
+
 - **Missing Value Imputation**: The missing `Age` values are filled with the median age, and `Embarked` missing values are filled with the most frequent value (mode).
 - **Feature Encoding**: The `Sex` feature is converted into binary values (0 for male, 1 for female). The `Embarked` feature is one-hot encoded.
 - **Feature Scaling**: Continuous features like `Age` and `Fare` are scaled using the StandardScaler.
 
 ## Machine Learning Models Used
+
 - **Logistic Regression**: A simple linear model for binary classification.
 - **Random Forest**: An ensemble model that uses multiple decision trees.
 - **Support Vector Classifier (SVC)**: A powerful classifier that separates classes using hyperplanes.
 
 ## Evaluation Metrics
+
 - **Accuracy**: The ratio of correctly predicted observations to the total observations.
 - **Precision, Recall, F1-Score**: Evaluates the model's ability to predict true positives.
 - **Confusion Matrix**: A matrix to visualize classification performance.
 
 ## Results
+
 - **Logistic Regression**: Accuracy = 80%
 - **Random Forest**: Accuracy = 83%
 - **SVC**: Accuracy = 78%
@@ -55,14 +67,11 @@ The **Random Forest** model performed the best with the highest accuracy.
 
 ---
 
-
 # Understanding the Models Used in Titanic Survival Prediction
 
 In this project, three different machine learning models were applied to predict the survival of passengers on the Titanic. Each model has unique characteristics and mechanisms of operation. Below, we'll explain how **Logistic Regression**, **Random Forest**, and **Support Vector Classifier (SVC)** work, along with their advantages and disadvantages in solving this classification problem.
 
----
-
-## 1. Logistic Regression
+## Logistic Regression
 
 ### Concept:
 Logistic Regression is a linear model used for binary classification tasks, meaning it predicts one of two possible outcomes. In this case, it predicts whether a passenger survived or not on the Titanic.
@@ -95,9 +104,7 @@ Where:
 - Struggles with complex, non-linear data.
 - Assumes a linear relationship between features and target.
 
----
-
-## 2. Random Forest
+## Random Forest
 
 ### Concept:
 Random Forest is an ensemble method that builds multiple decision trees and combines their predictions. It is a powerful model that works well on both regression and classification tasks.
@@ -120,9 +127,7 @@ Random Forest is an ensemble method that builds multiple decision trees and comb
 - Can be computationally expensive.
 - Less interpretable than simpler models like Logistic Regression.
 
----
-
-## 3. Support Vector Classifier (SVC)
+## Support Vector Classifier (SVC)
 
 ### Concept:
 Support Vector Classifier (SVC) is a supervised machine learning model that finds the optimal hyperplane which separates the data into two classes. It is a powerful model for classification, especially for non-linear data.
@@ -190,7 +195,8 @@ After evaluating all three models, the **Random Forest model** emerged as the be
 ## Conclusion
 The Titanic survival prediction project demonstrated how different machine learning algorithms perform on the same dataset. While Logistic Regression offers simplicity and speed, **Random Forest** is more robust and accurate for this specific problem, achieving the highest accuracy of **83%**. This project not only helped in understanding model selection but also showcased how hyperparameters and algorithm types affect performance. The **Random Forest model** would be the recommended model for predicting survival on the Titanic given the data at hand.
 
-
+---
 ## Acknowledgements
+
 - The Titanic dataset is publicly available on Kaggle (https://www.kaggle.com/c/titanic/data).
 - Special thanks to the Kaggle community for providing valuable insights and tutorials.
